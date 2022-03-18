@@ -4,16 +4,21 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav> -->
- <NavBarComponents />
+  <div class="vh-100">
   <router-view/>
+  <FooterComponent/>
+  </div>
+
+
 </template>
 
 <script>
-import NavBarComponents from './components/NavBarComponents.vue'
+import FooterComponent from "./components/FooterComponent.vue"
+
 
 export default {
   components:{
-    NavBarComponents
+    FooterComponent
   }
 }
 </script>
@@ -27,16 +32,7 @@ export default {
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+
 </style>
