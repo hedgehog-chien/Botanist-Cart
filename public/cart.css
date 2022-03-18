@@ -12,23 +12,23 @@ body h1 {
   color: #d2ffef;
 }
 
-header nav {
+.cart header nav {
   height: 15vh;
   background-color: #4e6853;
 }
 
-header .row.promo {
+.cart header .row.promo {
   height: 5vh;
   background-color: #d3caa0;
   color: #fff;
   text-align: center;
 }
 
-header .row.promo .col::before {
+.cart header .row.promo .col::before {
   content: "➤ ";
 }
 
-section .container h2 {
+.cart section .container h2 {
   font-family: Noto Sans TC, sans-serif;
   color: #4e6853;
   padding: 10px;
@@ -36,52 +36,52 @@ section .container h2 {
   margin-bottom: 3rem;
 }
 
-section .breakdown table {
+.cart section .breakdown table {
   border: #d3caa0 1px solid;
   border-radius: 0.5rem;
   text-align: center;
   width: 100%;
 }
 
-section .breakdown table th,
-section .breakdown table td {
+.cart section .breakdown table th,
+.cart section .breakdown table td {
   border-bottom: #d3caa0 1px solid;
 }
 
-section .breakdown table th.qty::after,
-section .breakdown table td.qty::after {
+.cart section .breakdown table th.qty::after,
+.cart section .breakdown table td.qty::after {
   content: " PC";
 }
 
-section .breakdown table th.price::after,
-section .breakdown table td.price::after {
+.cart section .breakdown table th.price::after,
+.cart section .breakdown table td.price::after {
   content: " TWD";
 }
 
-section .breakdown table tr.items td {
+.cart section .breakdown table tr.items td {
   height: 30vh;
   width: 30vw;
   overflow: hidden;
 }
 
-section .breakdown table tr.items td img {
+.cart section .breakdown table tr.items td img {
   height: 100%;
   width: 100%;
 }
 
-section .breakdown table tr.items td img:hover {
+.cart section .breakdown table tr.items td img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
 
-section .breakdown table th {
+.cart section .breakdown table th {
   font-size: 1.2rem;
   padding: 1.5rem;
 }
 
-section .breakdown button {
+.cart section .breakdown button {
   background-color: #4e6853;
   border-radius: 0.5rem;
   border: none;
@@ -91,7 +91,7 @@ section .breakdown button {
   margin: 0.5rem;
 }
 
-footer {
+.cart footer {
   min-height: 35vh;
   background-image: url(./assets/footer.jpeg);
   background-repeat: no-repeat;
@@ -102,7 +102,7 @@ footer {
   color: #fff;
 }
 
-footer .container-fluid.promo .row {
+.cart footer .container-fluid.promo .row {
   height: 20vh;
   background-color: #f3f4f3;
   color: #000;
@@ -110,12 +110,12 @@ footer .container-fluid.promo .row {
   text-align: left;
 }
 
-footer ul {
+.cart footer ul {
   height: 30vh;
   list-style-type: none;
 }
 
-footer ul li {
+.cart footer ul li {
   margin: 1rem;
 }
 /*# sourceMappingURL=cart.css.map */

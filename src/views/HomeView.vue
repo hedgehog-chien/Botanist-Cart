@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+      
     <header>
       <!-- <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
                        <div class="container-fluid">
