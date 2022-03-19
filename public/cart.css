@@ -12,23 +12,23 @@ body h1 {
   color: #d2ffef;
 }
 
-.cart header nav {
+.pages header nav {
   height: 15vh;
   background-color: #4e6853;
 }
 
-.cart header .row.promo {
+.pages header .row.promo {
   height: 5vh;
   background-color: #d3caa0;
   color: #fff;
   text-align: center;
 }
 
-.cart header .row.promo .col::before {
+.pages header .row.promo .col::before {
   content: "➤ ";
 }
 
-.cart section .container h2 {
+.pages section .container h2 {
   font-family: Noto Sans TC, sans-serif;
   color: #4e6853;
   padding: 10px;
@@ -36,52 +36,52 @@ body h1 {
   margin-bottom: 3rem;
 }
 
-.cart section .breakdown table {
+.pages section .breakdown table {
   border: #d3caa0 1px solid;
   border-radius: 0.5rem;
   text-align: center;
   width: 100%;
 }
 
-.cart section .breakdown table th,
-.cart section .breakdown table td {
+.pages section .breakdown table th,
+.pages section .breakdown table td {
   border-bottom: #d3caa0 1px solid;
 }
 
-.cart section .breakdown table th.qty::after,
-.cart section .breakdown table td.qty::after {
+.pages section .breakdown table th.qty::after,
+.pages section .breakdown table td.qty::after {
   content: " PC";
 }
 
-.cart section .breakdown table th.price::after,
-.cart section .breakdown table td.price::after {
+.pages section .breakdown table th.price::after,
+.pages section .breakdown table td.price::after {
   content: " TWD";
 }
 
-.cart section .breakdown table tr.items td {
+.pages section .breakdown table tr.items td {
   height: 30vh;
   width: 30vw;
   overflow: hidden;
 }
 
-.cart section .breakdown table tr.items td img {
+.pages section .breakdown table tr.items td img {
   height: 100%;
   width: 100%;
 }
 
-.cart section .breakdown table tr.items td img:hover {
+.pages section .breakdown table tr.items td img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
 
-.cart section .breakdown table th {
+.pages section .breakdown table th {
   font-size: 1.2rem;
   padding: 1.5rem;
 }
 
-.cart section .breakdown button {
+.pages section .breakdown button {
   background-color: #4e6853;
   border-radius: 0.5rem;
   border: none;
@@ -91,7 +91,7 @@ body h1 {
   margin: 0.5rem;
 }
 
-.cart footer {
+.pages footer {
   min-height: 35vh;
   background-image: url(./assets/footer.jpeg);
   background-repeat: no-repeat;
@@ -102,7 +102,7 @@ body h1 {
   color: #fff;
 }
 
-.cart footer .container-fluid.promo .row {
+.pages footer .container-fluid.promo .row {
   height: 20vh;
   background-color: #f3f4f3;
   color: #000;
@@ -110,12 +110,12 @@ body h1 {
   text-align: left;
 }
 
-.cart footer ul {
+.pages footer ul {
   height: 30vh;
   list-style-type: none;
 }
 
-.cart footer ul li {
+.pages footer ul li {
   margin: 1rem;
 }
 /*# sourceMappingURL=cart.css.map */

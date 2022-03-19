@@ -1,18 +1,8 @@
 <template>
-  <div class="cart">
+  <div class="pages">
     <header>
       <NavBarComponent />
-      <div class="row promo d-flex align-items-center">
-        <div class="col d-flex align-items-center justify-content-center">
-          滿千免運活動實施中
-        </div>
-        <div class="col d-flex align-items-center justify-content-center">
-          三十天內保證退款
-        </div>
-        <div class="col d-flex align-items-center justify-content-center">
-          累積 12.000+ 五星好評
-        </div>
-      </div>
+      <PromoComponent />
     </header>
 
     <section>
@@ -67,11 +57,13 @@
 
 <script>
 import NavBarComponent from "../components/NavBarComponent.vue";
+import PromoComponent from "../components/PromoComponent.vue";
 
 export default {
   name: "CartView",
   components: {
     NavBarComponent,
+    PromoComponent
   },
 };
 </script>
