@@ -1,0 +1,90 @@
+body {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../assets/bg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body h1 {
+  font-family: Lobster Two, cursive;
+  color: #d2ffef;
+}
+
+footer {
+  min-height: 10vh;
+  background-image: url(../assets/footer.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+footer ul {
+  height: 25vh;
+  list-style-type: none;
+  margin: 0 !important;
+  padding: 0 !important;
+  
+}
+
+footer ul li {
+  margin: 1rem;
+}
+
+footer .fab {
+  cursor: pointer;
+  transition: .2s;
+}
+
+footer .fab:hover {
+  color:rgba(210, 255, 239);
+}
+
+header {
+  min-height: 10vh;
+}
+
+header nav .dropdown-menu {
+  background: rgba(0,0,0, 0.5);
+}
+
+header nav .dropdown-menu .dropdown-item {
+  color: #fff;
+  transition: 0.2s;
+}
+
+header nav .dropdown-menu .dropdown-item:hover {
+  background:rgba(210, 255, 239, 0.7);
+  color: #000;
+}
+
+section {
+  height: 60vh;
+  margin: 5rem 0;
+}
+
+section .banner {
+  padding: 100px 0;
+  background-color: rgba(210, 255, 239, 0.6);
+  line-height: 2;
+  overflow: hidden;
+}
+
+section .banner h3 {
+  font-family: Noto Sans TC, sans-serif;
+  font-size: 3rem;
+}
+
+section .banner h3::first-letter {
+  font-size: 5rem;
+}
+
+section .banner p {
+  font-size: 20px;
+}
