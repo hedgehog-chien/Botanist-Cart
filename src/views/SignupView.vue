@@ -1,3 +1,18 @@
 <template>
-    <h1>This is sign up page.</h1>
+  <div class="pages">
+    <header>
+      <NavBarComponent />
+    </header>
+  </div>
 </template>
+
+<script>
+import NavBarComponent from "../components/NavBarComponent.vue";
+
+export default {
+  name: "SignupView",
+  components: {
+    NavBarComponent,
+  },
+};
+</script>

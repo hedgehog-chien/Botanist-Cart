@@ -2,43 +2,6 @@
   <div class="home">
       
     <header>
-      <!-- <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-                       <div class="container-fluid">
-                    <a class="navbar-brand mx-5" href="index.html"><h1>Botanist</h1></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-lg-0 ">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">首頁</a>
-                        </li>
-                        <a class="nav-link" href="#" >會員註冊</a>
-                        <li/>
-                        <li/>
-                        <a class="nav-link" href="#">關於我們</a>
-                        <li/>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              商品一覽
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">開運植物</a>
-                              <a class="dropdown-item" href="#">開運花卉</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                          </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="cart.html"><i class="fas fa-cart-plus"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i></a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-            </nav> -->
       <NavBarComponent />
       <BannerComponent />
     </header>
@@ -222,33 +185,6 @@
         </div>
       </div>
     </section>
-
-
-    <!-- <footer>
-      <div class="container-fluid promo">
-        <div class="row d-flex justify-content-center align-items-center">
-          <div class="col d-flex justify-content-center align-items-center">
-            <i class="fa-solid fa-truck-fast mx-3 h1"></i>
-            <span
-              ><strong>消費滿1,000 TWD 免運</strong><br />
-              全店植栽不分品項，單筆消費滿額即刻享受免運費乙次。
-            </span>
-          </div>
-          <div class="col d-flex justify-content-center align-items-center">
-            <i class="fa-solid fa-shield mx-3 h1"></i>
-            <span
-              ><strong>30天植栽存活率保證退款</strong><br />
-              我們為所有的植栽提供30天的鑑賞期，不怕黑手指摧殘！
-            </span>
-          </div>
-        </div>
-      </div>
-      <ul class="d-flex justify-content-center align-items-center">
-        <li><i class="fab fa-facebook-square"></i></li>
-        <li><i class="fab fa-instagram-square"></i></li>
-        <li><i class="fab fa-twitter-square"></i></li>
-      </ul>
-    </footer> -->
   </div>
 </template>
 

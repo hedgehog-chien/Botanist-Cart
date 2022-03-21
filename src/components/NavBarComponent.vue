@@ -21,7 +21,7 @@
                 >首頁</router-link
               >
             </li>
-            <router-link class="nav-link" to="/signup">會員註冊</router-link>
+            <router-link class="nav-link" to="/signup">註冊 | 登入</router-link>
             <li />
             <li />
             <router-link class="nav-link" to="/about">關於我們</router-link>
