@@ -7,7 +7,7 @@
     </header>
 
     <section>
-     <div class="container mt-5 best-seller">
+      <div class="container mt-5 best-seller">
         <h2>Best Sellers 熱銷植栽</h2>
 
         <div class="row row-cols-sm-4 d-flex justify-content-center gy-5">

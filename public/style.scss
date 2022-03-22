@@ -2,16 +2,13 @@
 
 
 header {
-  min-height: 100vh;
   background-image: url(./assets/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
   .banner {
-    margin-top: 5rem;
     .row {
-      height: 50vh;
       background-color: rgba(210, 255, 239, 0.6);
       text-align: center;
 
@@ -30,6 +27,7 @@ header {
         justify-content: space-around;
         color: #fff;
         list-style-type: none;
+        padding: 0;
         li:hover {
           cursor: pointer;
           color: $primary-color;

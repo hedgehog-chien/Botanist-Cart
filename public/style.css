@@ -12,19 +12,13 @@ body h1 {
 }
 
 header {
-  min-height: 100vh;
   background-image: url(./assets/bg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-header .banner {
-  margin-top: 5rem;
-}
-
 header .banner .row {
-  height: 50vh;
   background-color: rgba(210, 255, 239, 0.6);
   text-align: center;
 }
@@ -46,6 +40,7 @@ header .banner .row ul {
       justify-content: space-around;
   color: #fff;
   list-style-type: none;
+  padding: 0;
 }
 
 header .banner .row ul li:hover {
@@ -275,4 +270,3 @@ footer ul {
 footer ul li {
   margin: 1rem;
 }
-/*# sourceMappingURL=style.css.map */

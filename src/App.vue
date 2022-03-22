@@ -3,8 +3,6 @@
   <router-view/>
   <FooterComponent/>
   </div>
-
-
 </template>
 
 <script>
@@ -28,4 +26,8 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+@import "../public/style.css";
+@import "../public/cart.css";
+@import "../public/home.css";
 </style>
