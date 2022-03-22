@@ -26,17 +26,7 @@
             <li />
             <router-link class="nav-link" to="/about">關於我們</router-link>
             <li />
-            <li class="nav-item dropdown">
-              <router-link to="/products" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">商品一覽</router-link>
-
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><router-link to="/products" class="dropdown-item">所有商品</router-link></li>
-            <li><a class="dropdown-item" href="#">開運植物</a></li>
-            <li><a class="dropdown-item" href="#">開運花卉</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
+            <router-link class="nav-link" to="/products">商品一覽</router-link>
             <li class="nav-item">
               <router-link class="nav-link" to="/cart"
                 ><i class="fas fa-cart-plus"></i
