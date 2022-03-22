@@ -4,42 +4,27 @@
       <NavBarComponent />
       <PromoComponent />
     </header>
-    <section>
-      <div class="container">
-        <div class="row my-5">
-          <template v-for="product in products" :key="product">
-            <div class="card mx-1 col-3" v-bind="product">
-              <div class="card-top">
-                <img :src="product.photo" class="card-img-top" />
-              </div>
-              <div class="card-body">
-                <div class="card-mid">
-                  <h5 class="card-title">{{ product.item }}</h5>
-                  <p class="card-text">{{ product.category }}</p>
-                  <p class="card-text">價格：{{ product.price }}</p>
-                </div>
-                <div
-                  class="
-                    card-btm
-                    d-flex
-                    justify-content-evenly
-                    align-items-center
-                    mt-2
-                  "
-                >
-                  <div class="qty-select">
-                    數量：<select name="qty">
-                      <option v-for="index in 5" :key="index">
-                        {{ index }}
-                      </option>
-                    </select>
-                  </div>
-                  <a href="#" class="btn btn-primary">選購</a>
-                </div>
-              </div>
-            </div>
-          </template>
+    <section class="container">
+      <div class="category-button mt-5">
+        <button
+          v-for="(category, index) in categories"
+          :key="index"
+          :value="category.value"
+          @click="getCategory(index)"
+          class="mx-2 btn"
+        >
+          {{ category.name }}
+        </button>
+      </div>
+      <div class="row my-5 d-flex justify-content-center">
+        <div class="no-item"             :class="{ 'd-none': products.length != 0 }"
+>
+          <h3>本類別目前尚無商品。</h3>
+          <img src="./images/person-digging-solid.svg" />
         </div>
+        <template v-for="product in products" :key="product">
+          <ProductCardComponent v-bind="product" />
+        </template>
       </div>
     </section>
   </div>
@@ -48,31 +33,64 @@
 <script>
 import NavBarComponent from "../components/NavBarComponent.vue";
 import PromoComponent from "../components/PromoComponent.vue";
+import ProductCardComponent from "../components/ProductCardComponent.vue";
 import axios from "axios";
 
 export default {
   name: "ProductView",
-  data() {
-    return {
-      products: [],
-    };
-  },
   components: {
     NavBarComponent,
     PromoComponent,
+    ProductCardComponent,
+  },
+  data() {
+    return {
+      products: [],
+      path: "items",
+      categories: [
+        { name: "所有商品", value: "items" },
+        { name: "風水", value: "風水" },
+        { name: "擋煞", value: "擋煞" },
+        { name: "招財", value: "招財" },
+        { name: "桃花", value: "桃花" },
+        { name: "健康", value: "健康" },
+      ],
+    };
+  },
+  watch: {
+    path(newPath, oldPath) {
+      if (newPath !== oldPath) {
+        this.fetchMessages(this.path);
+      }
+    },
   },
   mounted() {
-    this.fetchMessages();
+    this.fetchMessages(this.path);
   },
   methods: {
     fetchMessages() {
       axios
-        .get(`https://cart-project-db.herokuapp.com/items`)
+        .get(`https://cart-project-db.herokuapp.com/${this.path}`)
         .then((response) => (this.products = response.data));
+    },
+    getCategory(index) {
+      let category = this.categories[index].value;
+      this.path = category;
     },
   },
 };
 </script>
 
 <style scoped>
+.category-button button {
+  color: #fff;
+  background-color: #4e6853;
+}
+.category-button button:hover {
+  background-color: #3b4e3f;
+}
+img {
+  width: 50px;
+  height: 50px;
+}
 </style>

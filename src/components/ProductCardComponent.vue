@@ -1,17 +1,43 @@
 <template>
-            <div class="row row-cols-sm-4 d-flex justify-content-center gy-5">
-          <div class="col col-3 d-flex flex-column justify-content-center align-items-center">
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2020/07/IMG_5697-final.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">斑葉常春藤盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div>
+  <div class="card col-12 col-sm-3 my-2 mx-1">
+    <div class="card-top">
+      <img :src="photo" class="card-img-top" />
+    </div>
+    <div class="card-body">
+      <div class="card-mid">
+        <h5 class="card-title">{{ item }}</h5>
+        <p class="card-text">{{ category }}</p>
+        <p class="card-text">價格：{{ price }}</p>
+      </div>
+      <div
+        class="card-btm d-flex justify-content-evenly align-items-center mt-2"
+      >
+        <div class="qty-select">
+          數量：<select name="qty">
+            <option v-for="index in 5" :key="index">
+              {{ index }}
+            </option>
+          </select>
+        </div>
+        <a href="#" class="btn btn-primary">選購</a>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      product:[]
+    }
+  },
+  props:{
+    category: String,
+    item: String,
+    price: Number,
+    stock: Number,
+    photo: String,
+  }
+}
 </script>

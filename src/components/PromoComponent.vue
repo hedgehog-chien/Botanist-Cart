@@ -11,3 +11,11 @@
         </div>
       </div>
 </template>
+
+<style scoped>
+.promo{
+padding: 0;
+margin: 0;
+}
+
+</style>
