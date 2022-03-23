@@ -13,13 +13,13 @@
         class="card-btm d-flex justify-content-evenly align-items-center mt-2"
       >
         <div class="qty-select">
-          數量：<select name="qty">
+          數量：<select ref="qty">
             <option v-for="index in 5" :key="index">
               {{ index }}
             </option>
           </select>
         </div>
-        <a href="#" class="btn btn-primary">選購</a>
+        <button href="#" class="btn btn-primary" @click="getSku(sku)">選購</button>
       </div>
     </div>
   </div>
@@ -27,17 +27,24 @@
 
 <script>
 export default {
-  data(){
-    return{
-      product:[]
-    }
+  data() {
+    return {
+      product: [],
+    };
   },
-  props:{
+  props: {
+    sku: String,
     category: String,
     item: String,
     price: Number,
     stock: Number,
     photo: String,
+  },
+  methods:{
+    getSku(sku){
+      let qty = this.$refs.qty.value
+      console.log(sku, qty)
+    }
   }
-}
+};
 </script>
