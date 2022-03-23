@@ -13,26 +13,30 @@
         class="card-btm d-flex justify-content-evenly align-items-center mt-2"
       >
         <div class="qty-select">
-          數量：<select ref="qty">
+          數量：<select ref="qty" class="qty" name="qty" >
             <option v-for="index in 5" :key="index">
               {{ index }}
             </option>
           </select>
         </div>
-        <button href="#" class="btn btn-primary" @click="getSku(sku)">選購</button>
+        <button href="#" class="btn btn-primary" @click="btn(sku)">選購</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+const $ = require("jquery");
+window.$ = $;
+
 export default {
-  data() {
-    return {
-      product: [],
-    };
+  data(){
+    return{
+      product:[],
+      // qty: 0
+    }
   },
-  props: {
+  props:{
     sku: String,
     category: String,
     item: String,
@@ -40,11 +44,11 @@ export default {
     stock: Number,
     photo: String,
   },
-  methods:{
-    getSku(sku){
-      let qty = this.$refs.qty.value
-      console.log(sku, qty)
+  methods: {
+    btn(sku){
+      let qty = this.$refs.qty.value;
+      console.log(sku, qty);
     }
   }
-};
+}
 </script>
