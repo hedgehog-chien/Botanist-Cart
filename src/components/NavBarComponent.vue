@@ -29,7 +29,7 @@
             <router-link class="nav-link" to="/products">商品一覽</router-link>
             <li class="nav-item">
               <router-link class="nav-link" to="/cart"
-                ><i class="fas fa-cart-plus"></i
+                ><i class="fas fa-cart-plus"> （{{currentQuantity}}）</i
               ></router-link>
             </li>
             <li class="nav-item">
@@ -43,7 +43,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed:{
+    currentQuantity(){
+      return this.$store.getters.currentQuantity
+    }
+  }
+};
 </script>
 
 <style scoped>

@@ -5,6 +5,20 @@ export default createStore({
     cart: []
   },
   getters: {
+    currentQuantity(state){
+      let total = 0;
+      for(var i = 0; i < state.cart.length; i++){
+        total += state.cart[i].number
+      }
+      return total
+    },
+    cartTotal (state){
+      let total = 0
+      state.cart.forEach(product => {
+        total += product.price * product.number
+      })
+      return total
+    }
   },
   mutations: {
     addCart(state, data){

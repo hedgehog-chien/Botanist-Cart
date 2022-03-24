@@ -14,34 +14,31 @@
         class="container breakdown d-flex justify-content-center flex-column"
       >
         <table>
-          <tr>
+          <tr class="filledRow">
             <th>商品名稱</th>
             <th></th>
             <th>數量</th>
             <th>單價</th>
             <th>小計</th>
           </tr>
-          <template  v-for="product in products" :key="product">
+          <template v-for="product in products" :key="product">
             <CheckoutTableComponent v-bind="product" />
           </template>
           <tr :class="{ 'd-none': products.length != 0 }">
-            <td colspan="5" class="py-5">購物車是空的，還不快去買。
-            </td>
+            <td colspan="5" class="py-5">購物車是空的，還不快去買。</td>
           </tr>
-          <tr>
+          <tr class="filledRow">
+            <td></td>
             <th>Total</th>
+            <th class="qty">{{currentQuantity}}</th>
             <td></td>
-            <td></td>
-            <td></td>
-            <td class="price"></td>
+            <th class="price">{{ total }}</th>
           </tr>
         </table>
 
         <div class="row d-flex justify-content-center align-items-center">
-          <button class="mt-5">Continue to shop</button>
-          <button class="mt-5" onclick="location.href='/product'">
-            Add to cart
-          </button>
+          <button class="mt-5">繼續購物</button>
+          <button class="mt-5">結帳</button>
         </div>
       </div>
     </section>
@@ -65,8 +62,19 @@ export default {
       products: this.$store.state.cart,
     };
   },
-  computed:{
-
-  }
+  computed: {
+    total() {
+      return this.$store.getters.cartTotal;
+    },
+    currentQuantity() {
+      return this.$store.getters.currentQuantity;
+    },
+  },
 };
 </script>
+
+<style scoped>
+.filledRow{
+  background-color: #fff7d3;
+}
+</style>
