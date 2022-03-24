@@ -17,8 +17,7 @@
         </button>
       </div>
       <div class="row my-5 d-flex justify-content-center">
-        <div class="no-item"             :class="{ 'd-none': products.length != 0 }"
->
+        <div class="no-item" :class="{ 'd-none': products.length != 0 }">
           <h3>本類別目前尚無商品。</h3>
           <img src="./images/person-digging-solid.svg" />
         </div>

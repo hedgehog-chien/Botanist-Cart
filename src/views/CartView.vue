@@ -15,32 +15,25 @@
       >
         <table>
           <tr>
-            <th>Item</th>
+            <th>商品名稱</th>
             <th></th>
-            <th>Quantity</th>
-            <th>Unit Price</th>
-            <th>Sub total</th>
+            <th>數量</th>
+            <th>單價</th>
+            <th>小計</th>
           </tr>
-          <tr class="items">
-            <td>盆栽一</td>
-            <td><img src="../assets/2.jpeg" alt="" /></td>
-            <td class="qty">2</td>
-            <td class="price">30</td>
-            <td class="price">60</td>
-          </tr>
-          <tr class="items">
-            <td>盆栽二</td>
-            <td><img src="../assets/3.jpeg" alt="" /></td>
-            <td class="qty">2</td>
-            <td class="price">30</td>
-            <td class="price">60</td>
+          <template  v-for="product in products" :key="product">
+            <CheckoutTableComponent v-bind="product" />
+          </template>
+          <tr :class="{ 'd-none': products.length != 0 }">
+            <td colspan="5" class="py-5">購物車是空的，還不快去買。
+            </td>
           </tr>
           <tr>
             <th>Total</th>
             <td></td>
             <td></td>
             <td></td>
-            <td class="price">120</td>
+            <td class="price"></td>
           </tr>
         </table>
 
@@ -58,12 +51,22 @@
 <script>
 import NavBarComponent from "../components/NavBarComponent.vue";
 import PromoComponent from "../components/PromoComponent.vue";
+import CheckoutTableComponent from "../components/CheckoutTableComponent.vue";
 
 export default {
   name: "CartView",
   components: {
     NavBarComponent,
-    PromoComponent
+    PromoComponent,
+    CheckoutTableComponent,
   },
+  data() {
+    return {
+      products: this.$store.state.cart,
+    };
+  },
+  computed:{
+
+  }
 };
 </script>
