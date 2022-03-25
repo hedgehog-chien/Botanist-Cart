@@ -50,7 +50,6 @@ export default {
         stock: this.$props.stock,
         photo: this.$props.photo,
       },
-
       number: 0,
     };
   },
@@ -81,4 +80,10 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  min-height: 100%;
+}
+.input-group {
+  flex-wrap: nowrap;
+}
 </style>

@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import createPersistedState from "vuex-persistedstate"
 
 export default createStore({
   state: {
@@ -36,10 +37,15 @@ export default createStore({
         newProduct.number = data.number
         state.cart.push(newProduct)
       }
+    },
+    removeFromCart(state, product){
+      let index = state.cart.findIndex(sku => sku.sku === product.sku);
+      state.cart.splice(index, 1);
     }
   },
   actions: {
   },
   modules: {
-  }
+  },
+  plugins: [createPersistedState()]
 })
