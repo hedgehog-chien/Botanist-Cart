@@ -74,7 +74,7 @@ export default {
         });
         alert("加入購物車");
       }
-    },
+    }
   },
 };
 </script>

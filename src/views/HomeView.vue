@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-      
     <header>
       <NavBarComponent />
       <BannerComponent />
@@ -11,25 +10,25 @@
         <h2>Best Sellers 熱銷植栽</h2>
 
         <div class="row row-cols-sm-4 d-flex justify-content-center gy-5">
-          <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2020/07/IMG_5697-final.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">斑葉常春藤盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
+          <template v-for="product in products" :key="product">
+            <div
+              class="
+                col col-3
+                d-flex
+                flex-column
+                justify-content-center
+                align-items-center
+              "
+            >
+              <img :src="product.photo" />
+              <div class="mt-5">
+                <h5 class="">{{ product.item }}</h5>
+                <p class="">{{ product.category }}</p>
+                <p>價格：{{ product.price }} NTD</p>
+              </div>
             </div>
-          </div>
-          <div
+          </template>
+          <!-- <div
             class="
               col col-3
               d-flex
@@ -154,9 +153,9 @@
               <p class="">趨吉避凶</p>
               <p>價格：500 NTD</p>
             </div>
-          </div>
+          </div> -->
         </div>
-      </div> 
+      </div>
 
       <div
         class="
@@ -191,13 +190,28 @@
 <script>
 import NavBarComponent from "../components/NavBarComponent.vue";
 import BannerComponent from "../components/BannerComponent.vue";
-
+import axios from "axios";
 
 export default {
   name: "HomeView",
   components: {
     NavBarComponent,
     BannerComponent,
+  },
+  data() {
+    return {
+      products: [],
+    };
+  },
+  mounted() {
+    this.fetchMessages();
+  },
+  methods: {
+    fetchMessages() {
+      axios
+        .get(`https://cart-project-db.herokuapp.com/items`)
+        .then((response) => (this.products = response.data));
+    },
   },
 };
 </script>
