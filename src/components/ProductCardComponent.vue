@@ -1,7 +1,7 @@
 <template>
   <div class="card col-12 col-sm-3 my-2 mx-1">
     <div class="card-top">
-      <img :src="photo" class="card-img-top m-1" />
+      <img :src="photo" class="card-img-top m-1" @click="redirectProduct(sku)" style="cursor: pointer" />
     </div>
     <div class="card-body">
       <div class="card-mid">
@@ -74,7 +74,10 @@ export default {
         });
         alert("加入購物車");
       }
-    }
+    },
+    redirectProduct: function (sku) {
+      this.$router.push(`/products/${sku}`);
+    },
   },
 };
 </script>

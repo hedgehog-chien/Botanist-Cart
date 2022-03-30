@@ -32,9 +32,6 @@
                 ><i class="fas fa-cart-plus"> （{{currentQuantity}}）</i
               ></router-link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa-solid fa-heart"></i></a>
-            </li>
           </ul>
         </div>
       </div>

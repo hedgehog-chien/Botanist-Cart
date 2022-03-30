@@ -24,7 +24,7 @@ export default createStore({
   mutations: {
     addCart(state, data){
       let isNewProduct = true
-      console.log(data)
+      // console.log(data)
       state.cart.map(function(product){
         if (product.sku === data.product.sku){
           product.number += data.number

@@ -20,7 +20,7 @@
                 align-items-center
               "
             >
-              <img :src="product.photo" />
+              <img :src="product.photo" @click="redirectProduct(product.sku)" />
               <div class="mt-5">
                 <h5 class="">{{ product.item }}</h5>
                 <p class="">{{ product.category }}</p>
@@ -28,132 +28,6 @@
               </div>
             </div>
           </template>
-          <!-- <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2018/10/DSCF5094.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">粉紅佳人合果芋盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div>
-          <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2018/10/DSCF5101.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">奧利多蔓綠絨盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div>
-          <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2017/12/DSCF4152.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">虎尾蘭盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div>
-          <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2018/05/DSCF4099.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">白金葛盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div>
-          <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2019/09/IMG_4029-final.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">富貴樹 / 芹葉福祿桐盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div>
-          <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2020/10/IMG_3293-final.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">開運竹盆栽</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div>
-          <div
-            class="
-              col col-3
-              d-flex
-              flex-column
-              justify-content-center
-              align-items-center
-            "
-          >
-            <img
-              src="https://www.2ustyle.com/wp-content/uploads/2021/05/IMG_4753-final.jpg"
-            />
-            <div class="mt-5">
-              <h5 class="">黃金葛</h5>
-              <p class="">趨吉避凶</p>
-              <p>價格：500 NTD</p>
-            </div>
-          </div> -->
         </div>
       </div>
 
@@ -211,6 +85,9 @@ export default {
       axios
         .get(`https://cart-project-db.herokuapp.com/items`)
         .then((response) => (this.products = response.data));
+    },
+    redirectProduct: function (sku) {
+      this.$router.push(`/products/${sku}`);
     },
   },
 };
